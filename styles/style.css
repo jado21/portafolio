@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*Esto sirve para poder utilizar las fuentes de google ; ahora solo esta el "Krona one" pero si quiero mas
+debo añadir mas desde el buscardor a el codigo*/
+
+/*Declarando variables*/
+:root{
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-monserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding-left: 5%;
+    padding-top: 35px;
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+/*Rem = 16px*/
+.header_menu_link{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.titulo-destaca{
+    color: var(--color-terciario);
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 8% 5%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+
+}
+
+.presentacion_contenido_parrafo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-monserrat);
+
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_link{
+    width: 50%;
+    background-color: var(--color-primario);
+    text-align: center;
+    padding: 21.5px 10px;  /* __px __px el primero es el vertical y el segundo la horizontal*/ /*Con solo esto queda en forma cuadrada*/
+    border-radius: 8px; 
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.presentacion_enlaces_titulo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+    cursor:pointer;
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+
+}
+
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion_contenido{
+        width: auto;
+    }
+
+}
